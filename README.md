@@ -5,9 +5,9 @@ Machine learning solution for the Kaggle competition: ROGII - Wellbore Geology P
 ##  Competition
 https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction/
 
-
+<span style="font-size: 10px; font-family: Calibri;">
 ROGII - Wellbore Geology Prediction
-───────────────────────────────────
+─────────────────────────────────────────────────────────────────
 
 • Kaggle Competition: ROGII - Wellbore Geology Prediction  
 • Tasks performed: Classification, Clustering, Regression  
@@ -15,17 +15,23 @@ ROGII - Wellbore Geology Prediction
 • Validation set is comprised of 10% of training data (10% of the wells).  
 • Hyperparameter tuning of XGBoost and KNN is done with 4-fold Cross Validation using GridSearchCV
 
+</span>
+
+<br>
+
+<span style="font-size: 12px;">
 
 ## Table of Contents
 
-- [Competition Description](#Competition Description)
-- [Competition Files and Field Description](#Competition Files and Field Description)
-- [Programming Languages](#Programming Languages)
-- [Python Modules](#Python Modules)
-- [Solution Overview](#Solution Overview)
-- [Solution Performance](#Solution Performance)
-- [Notebook Structure](#Notebook Structure)
+- [Competition Description](README.md#Competition Description)
+- [Competition Files and Field Description](README.md#Competition Files and Field Description)
+- [Programming Languages](README.md#Programming Languages)
+- [Python Modules](README.md#Python Modules)
+- [Solution Overview](README.md#Solution Overview)
+- [Solution Performance](README.md#Solution Performance)
+- [Notebook Structure](README.md#Notebook Structure)
 
+<br>
 
 ## Competition Description
 This competition is about the modelling of the drilling of a horizontal well. Drilling a well is difficult as we never know where we are due to the geological layers curvature and overall irregular morphology. The goal is to stay on the target layer and not delve into the wrong one. The depth in the layer is described by a measure called TVT (True Vertical Thickness) in feet (ft).
@@ -45,13 +51,17 @@ AI-generated illustration with Claude Sonnet 5 (with manual modifications)
     <em>AI-generated illustration with Claude Sonnet 5</em>
 </p>
 
+<br>
+
 ## Competition Goal
 Currently geologists estimate the current TVT value manually using their technical knowledge and the ROG II company software, the goal of the competition is to produce an ML or AI solution that does it automatically, minimizing the Root Mean Square Error (RMSE) associated with TVT prediction, this being the evaluation metric of the competition.  
 
 $$
 RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}
 $$
+
 <br>
+
 ## Competition Files and Field Description
 
 The files access is restricted to the competition, so instead the notebook is presented here with the results of its execution, hiding the raw information.
@@ -93,10 +103,12 @@ sample_submission.csv - A sample submission file in the correct format.
 - id - A unique identifier for each prediction point, formatted as {WELLNAME}_{row_index} (e.g., 015fe0d2_1654).
 - tvt - Your predicted True Vertical Thickness (ft).
 
-
+<br>
 
 ## Programming Languages
 - Python 3
+
+<br>
 
 ## Python Modules
 - pytorch
@@ -108,6 +120,7 @@ sample_submission.csv - A sample submission file in the correct format.
 - numba
 - pandas
 
+<br>
 
 ## Solution Overview
 This solution is structured in the following way:
@@ -146,11 +159,14 @@ So the sequence becomes consistent:
 $$
 y_{pred} = 0.92 * KNN_{pred} + 0.05 * XGB_{pred} + 0.03 * GR\text{-}M50F2_{pred}
 $$
+
 <br>
 
 ## Solution Performance
 This solution scored an RMSE of 14.337 on the competition. The solution that ended up winning the competition scored an RMSE of 5.639. The winner, as well as a large portion of the contestants seem to have used a Particle Filter model (also called a Sequential Monte Carlo (SMC) method).  
 Unfortunately, I ended not exploring this for lack of time, so I don't know how this would blend into my solution, but it remains as a possible challenge for the future.
+
+<br>
 
 ## Notebook Structure
 The summarized structure of the notebook is the following:
@@ -181,3 +197,5 @@ The summarized structure of the notebook is the following:
 - Typewell Layer Prediction
 - 2nd Prediction Preprocessing
 - Horizontal TVT Prediction
+
+</span>
