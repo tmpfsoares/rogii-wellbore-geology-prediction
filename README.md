@@ -1,13 +1,29 @@
 # ROGII - Wellbore Geology Prediction
 Machine learning solution for the Kaggle competition: ROGII - Wellbore Geology Prediction. Using Bidirectional LSTM, Hidden Markov Chains, Hierarchical Clustering, XGBoost and KNN
 
+<br>
 
-##  Competition
+## Table of Contents
+
+- [Competition Description](README.md#Competition%20Description)
+- [Competition Files and Field Description](README.md#Competition%20Files%20and%20Field%20Description)
+- [Programming Languages](README.md#Programming%20Languages)
+- [Python Modules](README.md#Python%20Modules)
+- [Solution Overview](README.md#Solution%20Overview)
+- [Solution Performance](README.md#Solution%20Performance)
+- [Notebook Structure](README.md#Notebook%20Structure)
+
+<br>
+
+## Competition Description
+
+Competition link:  
 https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction/
 
-<span style="font-size: 10px; font-family: Calibri;">
+<br>
+
 ROGII - Wellbore Geology Prediction
-─────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────
 
 • Kaggle Competition: ROGII - Wellbore Geology Prediction  
 • Tasks performed: Classification, Clustering, Regression  
@@ -15,25 +31,8 @@ ROGII - Wellbore Geology Prediction
 • Validation set is comprised of 10% of training data (10% of the wells).  
 • Hyperparameter tuning of XGBoost and KNN is done with 4-fold Cross Validation using GridSearchCV
 
-</span>
-
 <br>
 
-<span style="font-size: 12px;">
-
-## Table of Contents
-
-- [Competition Description](README.md#Competition Description)
-- [Competition Files and Field Description](README.md#Competition Files and Field Description)
-- [Programming Languages](README.md#Programming Languages)
-- [Python Modules](README.md#Python Modules)
-- [Solution Overview](README.md#Solution Overview)
-- [Solution Performance](README.md#Solution Performance)
-- [Notebook Structure](README.md#Notebook Structure)
-
-<br>
-
-## Competition Description
 This competition is about the modelling of the drilling of a horizontal well. Drilling a well is difficult as we never know where we are due to the geological layers curvature and overall irregular morphology. The goal is to stay on the target layer and not delve into the wrong one. The depth in the layer is described by a measure called TVT (True Vertical Thickness) in feet (ft).
 The goal of the competition is to predict the value of TVT for each 1ft step of drill in the 3D coordinate system (X, Y, Z).
 <br><br>We get 2 files per well drilled, one for the horizontal well and another for the respective typewell (vertical well), the reference well. 
@@ -41,10 +40,15 @@ On the vertical well, the travelling is done only across Z, and so we get the re
 These GR values are a signal obtained during drilling that can be interpreted to understand "where we are" in the layers. We have GR values on both well files.
 There's also additional info which refers to the current layer at each step, though this exists for training files only.
 
-![vertical_vs_horizontal_well](images/vertical_vs_horizontal_well.png)  
-AI-generated illustration with Claude Sonnet 5 (with manual modifications)
+<p align="center">
+    <img src="images/vertical_vs_horizontal_well.png" width="90%">  
+    <br>
+    <em>AI-generated illustration with Claude Sonnet 5 (with manual modifications)</em> 
+</p>
+
 <br>
 <br>
+
 <p align="center">
     <img src="images/gr_example.png" width="40%">  
     <br>
@@ -197,5 +201,3 @@ The summarized structure of the notebook is the following:
 - Typewell Layer Prediction
 - 2nd Prediction Preprocessing
 - Horizontal TVT Prediction
-
-</span>
