@@ -23,7 +23,7 @@ https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction/
 <br>
 
 ROGII - Wellbore Geology Prediction
-───────────────────────────────────────────────────────
+───────────────────────────────────
 
 • Kaggle Competition: ROGII - Wellbore Geology Prediction  
 • Tasks performed: Classification, Clustering, Regression  
