@@ -22,7 +22,7 @@ https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction/
 
 <br>
 
-ROGII - Wellbore Geology Prediction
+ROGII - Wellbore Geology Prediction  
 ───────────────────────────────────
 
 • Kaggle Competition: ROGII - Wellbore Geology Prediction  
@@ -31,6 +31,7 @@ ROGII - Wellbore Geology Prediction
 • Validation set is comprised of 10% of training data (10% of the wells).  
 • Hyperparameter tuning of XGBoost and KNN is done with 4-fold Cross Validation using GridSearchCV
 
+<br>
 <br>
 
 This competition is about the modelling of the drilling of a horizontal well. Drilling a well is difficult as we never know where we are due to the geological layers curvature and overall irregular morphology. The goal is to stay on the target layer and not delve into the wrong one. The depth in the layer is described by a measure called TVT (True Vertical Thickness) in feet (ft).
