@@ -161,6 +161,7 @@ So the sequence becomes consistent:
 <br><br>It's important to note that hyperparameter tuning is actually only done once per each model type at the beginning of predictions for each well. 
 <br><br>The third component of the prediction is an algorithm that compares the current horizontal step GR value and lag1 TVT against the typewell data. This is done by creating a lookup window to the typewell data a window that stretches from the lag1 TVT plus a margin value used for both up and down of that point on the typewell. Then we take the average of those TVT values to guess the current horizontal TVT, but those TVT values are multiplied by weights that are determined by how close the corresponding GR value is to the current horizontal step GR value. So we get a pondered TVT to help us guess where we stand in the drill. The obtained increment that this represents against the previous TVT value (lag1) is then divided by F*M. Where M is the margin that was used in the window in feet (ft), and F is a margin factor that is essentially the fraction that we multiply the margin for in this division. This approach to the algorithm is the one that resulted in the highest reduction on RMSE.
 <br><br>The prediction is done following the formula:
+
 $$
 y_{pred} = 0.92 * KNN_{pred} + 0.05 * XGB_{pred} + 0.03 * GR\text{-}M50F2_{pred}
 $$
